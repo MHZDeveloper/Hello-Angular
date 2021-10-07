@@ -1,0 +1,6 @@
+<div style="border-style: dashed">
+  <p *ngIf="user.id!=0">id : <span [textContent]="user.id"></span></p>
+  <p>firstName : {{user.firstName | lowercase}}</p>
+  <p>lastName : {{user.lastName | uppercase}}</p>
+  <button (click)="greet()">Click Me</button>
+</div>

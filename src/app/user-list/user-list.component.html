@@ -1,0 +1,3 @@
+<app-user *ngFor="let user of users" [user]="user" (greeting)="greet($event)"></app-user>
+<button routerLink="/add">Create User</button>
+<p>Date : {{this.date | date:'yyyy-MM-dd'}}</p>
