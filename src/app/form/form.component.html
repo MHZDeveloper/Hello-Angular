@@ -1,7 +1,7 @@
 <div>
   <form [formGroup]="form" (submit)="submit()">
     id : <input type="text" formControlName="id">
-    <span *ngIf="form.get('id').hasError('pattern')">id not valid</span><br>
+    <span *ngIf="form.get('id')?.hasError('pattern')">id not valid</span><br>
     firstName : <input type="text" formControlName="firstName"><br>
     lastName : <input type="text" formControlName="lastName"><br>
     <input type="submit" [disabled]="!form.valid">
