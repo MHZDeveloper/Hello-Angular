@@ -1,3 +1,8 @@
-<app-user *ngFor="let user of users" [user]="user" (greeting)="greet($event)"></app-user>
+<div *ngFor="let user of users" style="border-style: dashed">
+  <p *ngIf="user.id!=0">id : <span [textContent]="user.id"></span></p>
+  <p>firstName : {{user.firstName | lowercase}}</p>
+  <p>lastName : {{user.lastName | uppercase}}</p>
+  <button (click)="greet(user)">Click Me</button>
+</div>
 <button routerLink="/add">Create User</button>
 <p>Date : {{this.date | date:'yyyy-MM-dd'}}</p>

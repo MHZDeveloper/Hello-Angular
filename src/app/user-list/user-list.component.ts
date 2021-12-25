@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {User} from "../model/User";
 import {UserService} from "../service/UserService";
 
@@ -19,7 +19,7 @@ export class UserListComponent implements OnInit {
     this.userService.get().subscribe(users => this.users=users);
   }
 
-  greet($event: any) {
-    alert($event)
+  greet(user: User) {
+    alert("Hello "+user.firstName+" "+user.lastName)
   }
 }

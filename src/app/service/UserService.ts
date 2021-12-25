@@ -11,8 +11,8 @@ export class UserService{
 
   constructor(private http:HttpClient) {
     this.users = new Observable( observer => {
-      observer.next( [new User('0','Flen','Weld Falten'),
-        new User('2','Flena','Bent Faltena') ])
+      observer.next( [new User(0,'Flen','Weld Falten'),
+        new User(2,'Flena','Bent Faltena') ])
     })
   }
 
